@@ -5,4 +5,4 @@
     const DBHOST = 'localhost';
     const DBUSER = 'root';
     const DBPASSWORD = '';
-    const DBNAME = "Produtos";
+    const DBNAME = "produtos";

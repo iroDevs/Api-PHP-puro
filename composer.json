@@ -2,7 +2,7 @@
     "name": "pedro/api-php-puro",
     "autoload": {
         "psr-4": {
-            "Pedro\\ApiPhpPuro\\": "src/"
+            "App\\": "App/"
         },
 
         "files": [
