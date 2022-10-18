@@ -3,7 +3,12 @@
     "autoload": {
         "psr-4": {
             "Pedro\\ApiPhpPuro\\": "src/"
-        }
+        },
+
+        "files": [
+            "config.php"
+        ]
+
     },
     "authors": [
         {
