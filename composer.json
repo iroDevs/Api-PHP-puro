@@ -1,0 +1,14 @@
+{
+    "name": "pedro/api-php-puro",
+    "autoload": {
+        "psr-4": {
+            "Pedro\\ApiPhpPuro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pedro"
+        }
+    ],
+    "require": {}
+}
