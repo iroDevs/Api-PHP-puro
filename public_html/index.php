@@ -31,7 +31,3 @@
         http_response_code(400);
         throw new \Exception($e->getMessage());
     }
-
-   
-    
-    //Entrada para controladores

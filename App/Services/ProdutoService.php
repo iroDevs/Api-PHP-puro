@@ -16,7 +16,17 @@ class ProdutoService
     }
 
     public function post(){
+        $json = file_get_contents("php://input");
+        $produto = json_decode($json);
 
+        $response = Produtos::insertOne($produto);
+
+        if (!$response) {
+            http_response_code(400);
+            die();
+            throw new Exception("erro ao criar");
+        }
+        return [ 'message' => "criado"];
     }
 
     public function update(){
