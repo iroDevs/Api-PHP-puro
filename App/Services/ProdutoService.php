@@ -12,7 +12,7 @@ class ProdutoService
             return Produtos::selectAll();
         }
        
-        return Produtos::select($id);
+            return Produtos::select($id);
     }
 
     public function post(){

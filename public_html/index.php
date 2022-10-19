@@ -1,6 +1,8 @@
 <?php 
+    header('Content-Type: application/json');
 
     require_once "../vendor/autoload.php";
+
 
     if (!$_GET['url']) {
         throw new Exception("Erro ao acessar a url");
@@ -20,12 +22,13 @@
     
     try {
         $response = call_user_func_array(array(new $service, $method),array($id));
-        $httpResponse = json_encode(array('status' => 200, 'headers' => 'Application:JSON', 'content'=> $response));
+        $httpResponse = json_encode(array('status' => 'Sucess', 'headers' => 'Application:JSON', 'content'=> $response));
+        http_response_code(200);
         echo $httpResponse;
         return $httpResponse;
 
     } catch (\Exception $e) {
-        
+        http_response_code(400);
         throw new \Exception($e->getMessage());
     }
 
